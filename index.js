@@ -34,13 +34,15 @@ async function userName() {
     },
 });
     name = nameAns.u_name;
+    console.log(chalk.yellow(`Hey ${name}! Let's get started!`));
 }
 
 const spinnerWords = [ 
-    'Dusting off old books...',
-    'Finding answers...',
+    'Googling the answer...',
+    'Checking messages...',
     'Thinking about cats...',
     'Refreshing Twitter...',
+    "Wondering what's for dinner...",
 ]
 var wordOut = spinnerWords[Math.floor(Math.random() * spinnerWords.length)];
 
@@ -49,9 +51,9 @@ async function handleAnswer(correct) {
     await wait();
   
     if (correct) {
-      spinner.success({ text: `GADZOOKS ${userName}! THAT'S RIGHT! I guess you humans are smater than you seem...` });
+      spinner.success({ text: `GADZOOKS! THAT'S RIGHT! I guess you humans are smater than you seem...` });
     } else {
-      spinner.error({ text: `Oh no, ${userName} you got that wrong! Better luck next time...` });
+      spinner.error({ text: `Ah shoot, you got that wrong! Better luck next time...` });
       process.exit(1);
     }
   }
@@ -83,19 +85,26 @@ async function q1() {
       type: 'list',
       message: 'What is the smallest planet in our Solar System?',
       choices: [
-        'pluto',
+        'Mercury',
+        'Earth',
+        'Venus',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune',
         'Pluto'
       ],
     });
 
-    return handleAnswer(answers.q_0 === 'Pluto');
+    return handleAnswer(answers.q_1 === 'Pluto');
 };
 
-  function winner() {
-    figlet(`EPIC, ${userName} !\n YOU GOT EVERYTHING RIGHT!`, (data) => {
-      console.log(gradient.pastel.multiline(data) + '\n');
-      process.exit(0);
-    });
+async function winner() {
+    console.log(chalk.green(`CONGRATULATIONS ${name}! You EVERYTHING correct! I'm going to have to tell the other planets about this!`));
   }
 
+  await userName();
   await q0();
+  await q1();
+  await winner();
