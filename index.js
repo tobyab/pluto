@@ -96,8 +96,24 @@ async function q1() {
         'Pluto'
       ],
     });
-
     return handleAnswer(answers.q_1 === 'Pluto');
+};
+
+    async function q2() {
+        const answers = await inquirer.prompt({
+          name: 'q_2',
+          type: 'list',
+          message: 'What country is NASA from?',
+          choices: [
+            'America',
+            'Canada',
+            'China',
+            'India',
+            'Russia',
+          ],
+        });
+
+    return handleAnswer(answers.q_2 === 'America');
 };
 
 async function winner() {
@@ -107,4 +123,5 @@ async function winner() {
   await userName();
   await q0();
   await q1();
+  await q2();
   await winner();
