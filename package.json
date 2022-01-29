@@ -1,20 +1,31 @@
 {
-  "name": "pluto",
+  "name": "pluto-quiz",
   "version": "1.0.0",
-  "description": "",
+  "description": "A quiz run by Pluto!",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": "./index.js",
+  "bin": {
+    "pluto": "index.js"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Toby B",
   "license": "ISC",
   "dependencies": {
     "chalk-animation": "^1.6.0",
     "figlet": "^1.5.2",
     "inquirer": "^8.2.0",
     "nanospinner": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsTobez/pluto-quiz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ItsTobez/pluto-quiz/issues"
+  },
+  "homepage": "https://github.com/ItsTobez/pluto-quiz#readme"
 }
