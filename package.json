@@ -15,11 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "chalk-animation": "^2.0.0",
+    "cowsay": "^1.5.0",
     "figlet": "^1.5.2",
     "inquirer": "^9.0.0",
     "nanospinner": "^1.0.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ItsTobez/pluto-quiz.git"
