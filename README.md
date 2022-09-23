@@ -1,15 +1,23 @@
-# Pluto's quiz
+<img
+     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/ringed-planet_1fa90.png"
+     alt="Rigned planet emoji"
+     height="75"
+     width="75"
+/>
 
-This is a small project- it is a quiz run by Pluto! Your quiz master.
+A small space themed quiz run by quiz master Pluto!
 
-<h1>Getting started</h1>
+### Getting started
 
-1. Simply run: ```npx pluto-quiz``` to get started. 
+1. Run the following command in your terminal
 
-2. NPM will then prompt you to install some packages. Press ```y``` on your keyboard and the packages should install.
+```
+npx pluto-quiz
+```
+
 Then, you're all done!
 
-<h1>Feedback</h1>
+### Feedback
 
 If you have any suggestions, or are running into any issues,
 please open an issue! I can then try to help :)
